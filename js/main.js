@@ -8,12 +8,8 @@ btns.forEach((btn, idx) => {
 	});
 });
 
-btns[0].addEventListener('click', () => {
-	box.style.backgroundColor = 'hotpink';
-});
-btns[1].addEventListener('click', () => {
-	box.style.backgroundColor = 'royalblue';
-});
-btns[2].addEventListener('click', () => {
-	box.style.backgroundColor = 'orange';
+btns.forEach((btn) => {
+	btn.addEventListener('click', (e) => {
+		box.style.backgroundColor = e.currentTarget.innerText;
+	});
 });
